@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="hi">안녕하세요</div>
+    <input type="button" value="텍스트 색상 변경" onclick="changeTxt()">
+    <input type="button" value="배경색상 변경" onclick="changeBg()">
+
+
+    <h1 class="hel">hello~</h1>
+    <input type="button" value="텍스트/배경 색상 변경 orange/green" onclick="changeColor()" >
+
+
+    <h2 class="h2">안녕하세요</h2>
+    <input type="button" value="텍스트/배경 색상 변경" onclick="change()">
+
+
+
+
+
+    <script lang="java">
+        function changeTxt(){
+            var hi=document.getElementById("hi");
+            //스타일
+            hi.style.color="red";
+        }//
+
+
+        function changeBg(){
+            var hi=document.getElementById("hi");
+            hi.style.backgroundColor="yellow";
+        }//
+
+
+        function changeColor(){
+            var hel=document.querySelector(".hel");
+            hel.style.cssText="color:orangered; background-color:green";
+        }//
+
+
+
+        function change(){
+            const hh2=document.querySelector(".h2");
+            hh2.style.fontWeight="100";
+            hh2.style.cssText="color:gray; background-color:pink";
+            // 마지막 스타일만 적용되고, 폰트두께는 변하지 않음
+
+            // hh2.style.css속성명="" : 기존에 정의된 스타일에 새로운 속성 추가
+            // hh2.style.cssText="" : 기존에 정의된 스타일을 지우고 cssText로 덮어 씀
+
+        }//
+
+    </script>
+</body>
+</html>

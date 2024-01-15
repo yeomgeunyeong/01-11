@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="hi" style="color: teal; background-color: thistle;;">안녕하세요</div>
+    <input type="button" value="스타일 읽어오기" onclick="read()">
+    <div id="print"></div>
+
+
+    <div class="h1" style="color: hotpink; background-color: lightgray;">hello~</div>
+    <button onclick="readCom()">스타일 읽기</button>
+    <p class="write"></p>
+
+
+
+    <div class="hel" style="color: white; background-color: tomato;">안녕하세요</div>
+    <button onclick="readcolor()">color</button>
+    <button onclick="readrgb()">rgba</button>
+    <p class="co"></p>
+    <span class="rg"></span>
+
+
+    <script lang="java">
+        function read(){
+            const elem=document.getElementById("hi");
+            const print=document.getElementById("print");
+
+            print.innerText+=elem.style.color + "\n" ; //\n 줄바꿈기호 (역슬러시+n)
+            print.innerText+=elem.style.backgroundColor + "\n" ; 
+        }//
+
+
+
+        function readCom(){
+            var hh1=document.querySelector(".h1");
+            var write=document.querySelector(".write");
+            var color=getComputedStyle(hh1).color;
+            var bg=getComputedStyle(hh1).backgroundColor;
+
+            write.innerText="color:"+color+"\n"
+            write.innerText+="backgroundColor:"+bg+"\n"
+        }//
+
+
+
+
+        function readcolor(){
+            var hel=document.querySelector(".hel");
+            var co=document.querySelector(".co");
+
+            co.innerText+=hel.style.color+"\n";
+            co.innerText+=hel.style.backgroundColor+"\n";
+        }//
+
+        function readrgb(){
+            var hel=document.querySelector(".hel");
+            var rg=document.querySelector(".rg");
+            var color=getComputedStyle(hel).color;
+            var bg=getComputedStyle(hel).backgroundColor;
+
+            rg.innerText="color:"+color+"\n"
+            rg.innerText+="backgroundColor:"+bg+"\n"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .box{
+            width: 600px;
+            height: 400px;
+            margin: 100px auto;
+            border: 10px solid pink;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="img/animal01.png" alt="animal" class="ani_img">
+    </div>
+
+    <script lang="java">
+        var img_array = ["img/animal01.png", "img/animal02.png", "img/animal03.png", "img/animal04.png",
+            "img/animal05.png", "img/animal06.png", "img/animal07.png", "img/animal08.png", "img/animal09.png",
+            "img/animal10.png", "img/animal11.png", "img/animal12.png"];
+
+        var num=img_array.length; //12, index 11
+        console.log(num);
+
+        var img_path=document.querySelector(".ani_img").getAttribute("src");
+        console.log(img_path);
+
+        // var i=0;
+
+        // setInterval(function(){
+
+        //     if(i<num-1){
+        //         i++;
+        //     }else{
+        //         i=0;
+        //     }
+
+        //     document.querySelector(".ani_img").setAttribute("src", img_array[i])
+        // }, 2000);
+
+
+        // setInterval(function(){
+        //     document.querySelector(".ani_img").setAttribute("src", img_array[0]);
+            
+        //     var first=img_array.shift();
+        //     console.log("first:", +first);
+        //     img_array.push(first);
+        // }, 2000)
+
+        
+        setInterval(function(){
+            document.querySelector(".ani_img").setAttribute("src", img_array[11]);
+            var last=img_array.pop();
+            console.log("last:", last);
+            img_array.unshift(last);
+        },2000)
+
+    </script>
+</body>
+
+</html>

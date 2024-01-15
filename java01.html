@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+        var array=[257, "korea", true, function(){}, {}, [500,600]];
+        console.log(array);
+        var count=array.length;
+        console.log(count);
+
+        var arrayA=[0,1]
+        arrayA.push(2); //마지막요소에 추가
+        arrayA.push(3);
+        arrayA.push(4);
+        console.log(arrayA);
+
+        var arrayB=["A","B","C"]
+        var a_p=arrayB.pop(); //배열에 마지막 요소 제거
+        console.log(arrayB);
+        console.log(a_p);
+        
+        var arrayC=[10,20,30,40,50]
+        arrayC.unshift(0);
+        console.log(arrayC);
+
+        var arrayD=["사과","딸기","배","바나나"]
+        console.log(arrayD[0]);
+        console.log(arrayD[1]);
+        console.log(arrayD[2]);
+        console.log(arrayD[3]);
+        var a_d=arrayD.shift();
+        console.log(a_d);
+        console.log(arrayD);
+
+        var arrayE=[1,5,7]
+        // arrayE.splice(start, deletecount, element);
+        arrayE.splice(1,0,10,11,12)
+        console.log(arrayE); //1, 10, 11, 12, 5, 7
+
+        arrayE.splice(1,2)
+        console.log(arrayE); //1
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
